@@ -11,3 +11,4 @@
 ### Javascript
 
 ### Python
+1. [Basic Syntax]()
