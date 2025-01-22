@@ -12,3 +12,4 @@
 
 ### Python
 1. [Basic Syntax](https://github.com/SurinSeong/TIL/blob/14958aa50937e10c8838cf0c6ff708ff544437b7/Python/Basic-Syntax.md)
+2. [Functions]()
