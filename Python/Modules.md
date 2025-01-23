@@ -1,5 +1,5 @@
 # Modules
-[Modules 실습 코드]()
+[Modules 실습 코드](https://github.com/SurinSeong/SWEA/tree/d634538b410b036f7ed6c688332310d471b53045/review/06-modules)
 
 - 한 파일로 묶인 변수와 함수의 모음
 - 특정한 기능을 하는 코드가 작성된 파이썬 파일(.py)
