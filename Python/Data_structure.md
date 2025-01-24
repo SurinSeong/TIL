@@ -59,7 +59,7 @@ ex) `'hello'.capitalize()`
 
 </details>
 
-※ 추가적인 메서드는 **[공식 문서]()** 참고!
+※ 추가적인 메서드는 **[공식 문서](https://docs.python.org/3/)** 참고!
 
 ---
 
