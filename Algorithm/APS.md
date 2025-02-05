@@ -41,14 +41,15 @@
 
 - 선언
   - 프로그램에서 사용할 배열의 이름이 필요함.
-  <detail>
-  </detail>
-  ```
-  arr = list()
-  arr = []
-  arr = [0]*10
-  arr = [1, 2, 3]
-  ```
+  <details>
+    <summary>1차원 배열 선언의 예</summary>
+    ```
+    arr = list()
+    arr = []
+    arr = [0]*10
+    arr = [1, 2, 3]
+    ```
+  </details>
 
 - 접근
   - `arr[0] = 10` # 배열 arr의 0번 원소에 10을 저장
