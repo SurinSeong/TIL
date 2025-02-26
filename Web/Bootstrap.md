@@ -74,5 +74,87 @@ mt-5
 2. Inline text elements
     - HTML inline 요소에 대한 스타일
   
-3. 
-4. 
+3. List
+    - HTML list 요소에 대한 스타일
+  
+### Color
+
+- Bootstrap Color system : Bootstrap이 지정하고 제공하는 색상 시스템
+- Text, border, Background 및 다양한 요소에 사용하는 Bootstrap의 색상 키워드
+- 사이트 제공 **규칙** 꼭 숙지하기!
+
+### Conponent
+
+- Bootstrap에서 제공하는 **UI 관련 요소**
+    - 버튼, 네비게이션 바, 카드, 폼, 드롭다운 등
+
+- 이점 : 일관된 디자인을 제공하여 웹사이트의 구성요소를 구축하는 데 유용하게 활용
+ 
+- 대표 Component
+    - Alerts ex) github
+    - Badges
+    - Buttons
+    - **Cards** : 구성이 아주 많이 쓰인다.
+        - 이미지 + 본문
+        - [Card Docs](https://getbootstrap.com/docs/5.3/components/card/)
+    - **Navbar** : 네비게이션 바도 아주아주 자주 쓰인다.
+        - [Navbar Docs](https://getbootstrap.com/docs/5.3/components/navbar/)
+
+---
+
+## Semantic Web
+
+- 웹 데이터를 **의미론적으로 구조화된 형태**로 표현하는 방식
+    - "이 요소가 시각적으로 어떻게 보여질까?" --> "이 요소가 가진 목적과 역할은 무엇일까?"
+
+### Semantic in HTML
+
+- HTML 요소가 의미를 가진다는 것
+- `<h1>Heading</h1>` : "**페이지 내 최상위 제목**"이라는 의미를 제공하는 요소 h1 => **브라우저에 의해 스타일이 지정**된다.
+
+- HTML Sementic Element : 기본적인 모양과 기능 이외에 **의미**를 가지는 HTML 요소  
+=> 검색엔진 및 개발자가 웹페이지 콘텐츠를 이해하기 쉽도록
+
+- 대표적인 Semantic Element (전부 div와 똑같음)
+    - header
+    - nav
+    - main
+    - article
+    - section
+    - aside
+    - footer
+
+### Semantic in CSS
+
+- CSS 방법론 : CSS를 효율적이고 유지 보수가 용이하게 작성하기 위한 일련의 가이드라인
+- OOCSS (Object Oriented CSS) : **객체 지향적 접근법**을 적용하여 CSS를 구성하는 방법론
+
+- OOCSS 기본 원칙 (**함수**처럼 **클래스** 만들기)
+    1. 구조와 스킨을 분리
+        - 구조와 스킨을 분리함으로써 재사용 가능성을 높임
+        - 모든 버튼의 **공통 구조**를 정의 + **각각의 스킨**(배경색과 폰트 색상)을 정의
+
+    2. 컨테이너와 콘텐츠를 분리
+        - 객체에 직접 적용하는 대신 **객체를 둘러싸는 컨테이너에 스타일을 적용**
+        - 스타일을 정의할 때, 위치에 의존적인 스타일을 사용하지 않도록 함
+        - 콘텐츠를 다른 컨테이너로 이동시키거나 재배치할 때, 스타일이 깨지는 것을 방지
+
+---
+
+### Bootstrap을 사용하는 이유
+
+- 가장 많이 사용되는 CSS 프레임워크
+- 사전에 디자인된 다양한 컴포넌트 및 기능
+    - 빠른 개발과 유지보수
+- 손쉬운 반응형 웹 디자인 구현
+- 커스터마이징이 용이
+- 크로스 브라우징 지원
+    - 모든 주요 브라우저에서 작동하도록 설계되어 있음
+ 
+### 의미론적 마크업이 필요한 이유
+
+- 검색엔진 최적화 (SEO)
+    - 검색 엔진이 해당 웹사이트를 분석하기 쉽게 만들어 검색 순위에 영향을 줌.
+
+- 웹 접근성 (Web Accessibility)
+    - 웹사이트, 도구, 기술이 고령자나 장애를 가진 사용자들이 사용할 수 있도록 설계 및 개발하는 것
