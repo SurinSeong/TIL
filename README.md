@@ -18,6 +18,8 @@
 
 ## Algorithm
 
+1. [Brute Force](https://github.com/SurinSeong/TIL/blob/69e65b606ab4c716fe7fbd7ebc2649e0a84fd02c/Algorithm/Brute-Force.md)
+
 
 ## Web
 1. []()
