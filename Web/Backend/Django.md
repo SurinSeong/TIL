@@ -274,3 +274,29 @@
     - REST API는 이 중에서도 **JSON** 타입으로 **응답하는 것**을 권장한다.
  
 - 우리가 해야 할 것은 서버가 응답해줄 json을 어떻게 구축할 것인가?
+
+## 요청과 응답
+
+### DRF (Django REST framework)
+
+- Django에서 Restful API 서버를 쉽게 구축할 수 있도록 도와주는 오픈소스 라이브러리
+
+### Django URLs
+
+- 사용자가 어떠한 경로로 요청을 보내게 되면, 그 요청에 대한 우선적인 처리를 urls.py가 체크한다.
+- 요청에 맞는 함수를 호출한다.
+- 적절한 input에 대한 output을 반환한다.
+
+- URL dispatcher (운항 관리자, 분배기)
+    - URL 패턴을 정의하고, 해당 패턴이 일치하는 요청을 처리할 view 함수를 연결 (매핑)
+    - 식별자 : urls.py / method : decorator / 형식 : JSON
+ 
+### 변수와 URL
+
+- 현재 URL 관리의 문제점 : 템플릿의 많은 부분이 중복되고, URL의 일부만 변경되는 상황이라면 계속해서 비슷한 URL과 함수를 작성해 나가야할까?
+- **Variable Routing** : URL 일부에 변수를 포함시키는 것 (변수는 view 함수의 인자로 전달할 수 있다.)
+    - path_converter
+        - 형식 : <type: variable_name>
+     
+- 두 번째 어플리케이션 (pages)을 만들게 된다면?? + 그 안에 다른 어플리케이션과 동일한 이름의 함수가 들어 있다면?
+    - 각 app 마다의 url을 각자의 app 폴더 내에서 관리하도록 하는 기능이 존재함!
