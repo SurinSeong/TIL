@@ -104,3 +104,19 @@
     - 단, DB가 **단일한 객체를 반환**할 때는 QuerySet이 아닌 **모델(Class)의 인스턴스로 반환**된다.
 
 ### QuerySet API는 python의 모델 클래스와 인스턴스를 활용해 DB에 데이터를 저장, 조회, 수정, 삭제하는 것!
+
+# Serialization (직렬화)
+
+- 여러 시스템에서 활용하기 위해 데이터 구조나 객체 상태를 나중에 **재구성할 수 있는 포맷으로 변환**하는 과정
+- **어떠한 언어나 환경**에서도 나중에 **다시 쉽게 사용할 수 있는 포맷**으로 변환하는 과정
+- 예시)
+    - DB에서 가지고 온 객체 정보 >> 직렬화된 데이터 >> JsonResponse 가능
+    - Serializer Class!
+ 
+## Serializer
+
+- Serialization을 진행하여 Serialized data를 반환해주는 클래스
+- ModelSerializer : Django 모델과 연괄된 Serializer 클래스
+    - 일반 Serializer와 달리 사용자 입력 데이터를 받아 **자동으로 모델 필드에 맞추어** Serialization을 진행
+    - 
+
