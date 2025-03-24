@@ -110,3 +110,31 @@ ForeignKey(to, on_delete) # N:1 관계 설정 모델 필드
 - 한 테이블의 0개 이상의 레코드가 다른 테이블의 0개 이상의 레코드와 관련된 경우
     - **양쪽 모두에서 N:1의 관계를 가진다.**
 - `ManyToManyField` 로 **중개 모델을 자동으로 생성**한다.
+
+Teacher
+
+| id |
+| --- |
+| name |
+
+중개 모델
+
+| id |
+| --- |
+| name |
+| course_id |
+| teacher_id |
+
+Course
+
+| id |
+| --- |
+| name |
+
+Course에는 강의 제목만 저장
+
+Teachers에는 강사 이름만 저장
+
+⇒ 중개 모델을 통해 ID를 받아서 저장한다.
+
+⇒ ManyToManyField !
