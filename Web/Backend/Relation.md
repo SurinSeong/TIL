@@ -138,3 +138,4 @@ Teachers에는 강사 이름만 저장
 ⇒ 중개 모델을 통해 ID를 받아서 저장한다.
 
 ⇒ ManyToManyField !
+
