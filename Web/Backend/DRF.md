@@ -102,3 +102,89 @@
 
 - django에서 RESTful API 서버를 쉽게 구축할 수 있도록 도와주는 오픈소스 라이브러리
 - djangorestframework 설치 필요 [Django REST framework](https://www.django-rest-framework.org/)
+
+---
+
+- 어떤 게시글의 댓글을 **작성**하기 위해서는 게시글의 pk(**FK**)가 필요하다.
+    - url 다르게 구성되어야 함.
+
+- url, api는 초반에 설정한다.
+
+### 특정 게시글에 댓글을 작성하는 방법
+
+- 외래키 가져올 때, Form에서는 commit=False 한 후, 외래 키 넣어주고 다시 저장했다. 하지만, 지금은 DRF 이기 때문에 문법이 다르다. save()의 인자로 외래키를 넣어주면 된다.
+- serializer 설정도 다시 해주어야 한다.
+    - `fields = '__all__'`을 해준다면, 모든 필드를 유효성 검사한다.
+    - 이때, 외래 키는 유효성 검사를 하지 않아도 된다. 왜냐면, 외래 키는 이미 저장된 데이터이고, 외부에서 들어오는 데이터가 아니기 때문이다.
+    - 따라서, 외래 키는 **읽기 전용 필드**로 바꿔주어야 한다.
+        - 유효성 검사 목록 제외!, but, 응답 데이터에는 존재!
+
+### 응답 데이터 재구성하기
+
+- 댓글 조회 시, 게시글 번호만 제공하는 것이 아닌 **내용**을 준다.
+- 게시글의 내용을 가공해주는 시리얼라이저가 필요하다!
+
+## 역참조 데이터 구성
+
+- 게시글, 댓글 간 역참조 관계를 활용한 JSON 데이터 재구성하기
+    1. 단일 게시글 조회 시, 해당 게시글에 작성된 댓글 목록도 함께 붙여서 응답
+        - Nested relationships (역참조 매니저 활용)
+            - 모델 관계 상으로 참조하는 대상은 참조되는 대상의 표현에 포함되거나 중첩될 수 있다.
+            - 이러한 중첩 관계는 serializers를 필드로 사용해 표현이 가능하다.
+
+    2. 단일 게시글 조회 시, 해당 게시글에 작성된 댓글 개수도 함께 붙여서 응답
+        - views.py에서 annotate 사용 -> num_of_comments 추가하기
+            - annotate : **SQL의 집계 함수**를 활용해서 쿼리 단계에서 데이터 가공을 수행한다.
+
+        - serializer.data를 반환하면, 해당 article 객체에는 num_of_comments가 포함된다.
+
+### Serializer 개선 : SerializerMethodField 사용하기
+
+- 읽기 전용 필드를 커스터마이징하는 것에 사용한다.
+- Serializer에서 추가적인 데이터 가공을 하고 싶을 때 사용한다.
+
+- `get_<필드명>` 함수 정의
+    - serializer.data를 호출할 때, `get_<필드명>` 메서드가 실행되어, 자동으로 값이 추가 된다.
+    ![alt text](img/image2.png)
+
+- 동작 원리
+    1. `SerializerMethodField`를 `Serializer` 클래스 내에서 필드로 선언하면, DRF는 `get_<필드명>`이라는 이름을 가진 메서드를 자동으로 찾는다.
+        - ex) `full_name = serializers.SerializerMethodField()` 라고 선언하면, DRF는 `get_full_name(self, obj)` 메서드를 찾아 해당 값을 직렬화 결과에 넣어준다.
+    2. obj는 현재 직렬화 중인 모델 인스턴스이고, obj의 속성이나, annotate된 필드를 활용해서 새로운 값을 만들 수 있다.
+
+- 주의사항
+    1. 읽기 전용으로, 생성, 수정 요청 시에는 사용되지 않는다.
+    2. get_ 메서드는 반드시 (self, obj) 형태로 정의해야 한다. obj는 현재 직렬화 중인 모델 인스턴스를 의미한다.
+
+- 사용 목적
+    1. 유연성 : 다양한 계산 로직을 손쉽게 추가 가능
+    2. 가독성 : 데이터 변환 과정을 serializer 내부 메서드로 명확히 분리
+    3. 유지보수성 : view나 model에 비해 Serializer측 로직 변경이 용이
+    4. 일관성 : view에서 별도로 data 수정 없이도 직렬화 결과를 제어
+
+---
+
+## API 문서화
+
+- OpenAPI Specification (OAS) : RESTful API를 설명하고 시각화하는 표준화된 방법
+    - API에 대한 세부사항을 기술할 수 있는 공식 표준
+
+- Swagger, Redoc : OAS 기반 API에 대한 문서를 생성하는 데 도움을 주는 오픈소스 프레임워크
+
+### 문서화 활용
+
+- drf-spectacular
+
+- 설계 우선 접근법
+
+### 참고
+
+- 404 에러
+- django shortcuts functions
+    - `get_object_or_404`
+    - `get_list_or_404`
+
+- **View와 Serialzier 의 역할**
+    - 비즈니스 로직(데이터 가공, annotate, 필터링) : view나 queryset 로직에서 처리
+    - 결과물을 직렬화 : serializer
+    - 복잡한 query나 로직 : Views.py
