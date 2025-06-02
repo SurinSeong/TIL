@@ -4,37 +4,37 @@
 
 - AI 모델이 학습하기에 얼마나 완전하고 정확하게 구축되었는가? (데이터 유형에 따라 다름)
 
-![스크린샷 2025-06-02 105458.png](attachment:3b8d3d8f-09fe-401d-8864-6faf168a7a28:스크린샷_2025-06-02_105458.png)
+![Image](https://github.com/user-attachments/assets/291928f7-7ef9-476d-b736-b7b7085714ee)
 
 ## 정형 데이터의 품질에 대한 정의
 
 ### 1. 완전성
 
-![스크린샷 2025-06-02 105724.png](attachment:ab063a6d-97cc-4f64-9856-ca12caa63f84:스크린샷_2025-06-02_105724.png)
+![Image](https://github.com/user-attachments/assets/614443b4-f934-41f9-ab30-30ecb2dcff41)
 
 ※ 완전성이 지켜지지 않은 경우 : AI 모델이 학습할 수 있는 정보가 줄어들고 중요한 정보가 손실될 수 있음.
 
 ### 2. 유일성
 
-![스크린샷 2025-06-02 110035.png](attachment:832fb751-9a90-42fd-b117-bb381754fa5a:스크린샷_2025-06-02_110035.png)
+![Image](https://github.com/user-attachments/assets/874dc2b2-9a99-4ca8-ac10-f7d3ae6c487d)
 
 ※ 유일성이 지켜지지 않은 경우 : 중복된 특정 패턴을 과대평가하여 불균형한 모델이 만들어짐, 불필요한 학습 시간과 연산 자원 추가로 인한 낭비
 
 ### 3. 유효성
 
-![스크린샷 2025-06-02 110336.png](attachment:c8372ac4-c059-47b1-8bf2-04881283baf4:스크린샷_2025-06-02_110336.png)
+![Image](https://github.com/user-attachments/assets/18419d66-335a-4d13-91ea-976da139ce41)
 
 ※ 유효성이 지켜지지 않은 경우 : 비현실적인 결과를 출력
 
 ### 4. 일관성
 
-![스크린샷 2025-06-02 110438.png](attachment:90aa773d-fd76-4a7c-82c7-a308540e447c:스크린샷_2025-06-02_110438.png)
+![Image](https://github.com/user-attachments/assets/c811fd79-3e00-4763-a4b3-3a697530d7fb)
 
 ※ 일관성이 지켜지지 않은 경우 : 모델이 서로 상충되는 데이터를 학습하여 혼란이 가중될 수 있음, 편향된 결과를 도출하거나 일반화 성능 저하
 
 ### 5. 정확성
 
-![스크린샷 2025-06-02 110620.png](attachment:94b844ca-3706-468c-aac4-ba6ea32ad8cc:스크린샷_2025-06-02_110620.png)
+![Image](https://github.com/user-attachments/assets/5850688b-34dd-49ee-8e05-eb189bf00f28)
 
 ※ 정확성이 지켜지지 않은 경우 : 모델이 잘못된 패턴을 학습하여 신뢰성이 떨어지는 결과를 출력, 윤리적 혹은 법적 문제 발생
 
@@ -49,7 +49,7 @@
 - 비율을 정해 최소 품질 달성 기준을 설정하는 것도 좋은 방법
 - 아래의 기준은 예시이고, 문제 해결의 목적에 따라 조정가능하다.
     
-    ![스크린샷 2025-06-02 111118.png](attachment:5ac544ae-fafa-4dde-9b2f-67b8e5044274:스크린샷_2025-06-02_111118.png)
+    ![Image](https://github.com/user-attachments/assets/8938ef73-599e-4a88-ab24-10e70e31de0b)
     
 
 ## 비정형 데이터의 품질
@@ -59,17 +59,17 @@
 
 ### 1. 이미지 데이터
 
-![스크린샷 2025-06-02 111449.png](attachment:351e6bc5-fb6a-417e-b5e2-2f9ec5a0dbc0:스크린샷_2025-06-02_111449.png)
+![Image](https://github.com/user-attachments/assets/4d6cfdf6-1675-40f1-9cff-08f265df1e22)
 
 ### 2. 오디오 데이터
 
-![스크린샷 2025-06-02 111547.png](attachment:70a701f6-1a11-47e1-ab31-fa933c271d56:스크린샷_2025-06-02_111547.png)
+![Image](https://github.com/user-attachments/assets/944ff2ba-96ff-4fb4-9e2b-4d80c74d8009)
 
 ## 나쁜 데이터, 저품질 데이터
 
 - 데이터 품질 정의 기준에 맞지 않는 데이터들
     
-    ![스크린샷 2025-06-02 111705.png](attachment:024df9d4-1bc6-4d74-b51f-f75e7899ceea:스크린샷_2025-06-02_111705.png)
+    ![Image](https://github.com/user-attachments/assets/01e5b82f-6ea3-46d9-938d-1cc66702fc07)
     
 
 ### 저품질 데이터가 AI 모델에 미치는 영향
@@ -91,7 +91,7 @@
 
 - 데이터 활용에 있어 수집, 저장, 분석 활용 단계별로 데이터 품질 관리를 위한 일반적인 점검 사항
     
-    ![스크린샷 2025-06-02 114037.png](attachment:657653eb-36be-4cb6-be52-d293ff990093:스크린샷_2025-06-02_114037.png)
+    ![Image](https://github.com/user-attachments/assets/a3a38920-ef8d-4652-8309-aba68abb9ded)
     
 
 ## 품질 측정 및 지수
@@ -107,7 +107,7 @@
 - 특정 기준별로 품질이 낮은 데이터를 빠르게 파악할 수 있고 대응할 수 있음.
 - 데이터 품질의 기준을 명확히 세울 수 있음.
     
-    ![스크린샷 2025-06-02 115525.png](attachment:8b72a65e-547f-4aea-a2b3-f404213262ef:스크린샷_2025-06-02_115525.png)
+    ![Image](https://github.com/user-attachments/assets/ddfad729-1696-4107-9140-d28cf8ccbc46)
     
 
 ### 3. 오류율 측정
@@ -115,7 +115,7 @@
 - 정형 데이터에 대한 오류율은 대량 데이터 중 일부 오류의 비율이므로 수치가 적음
 - 그러나 비정형 데이터에 대한 오류율은 모집단의 크기가 정형 데이터에 비해 매우 작은 경우가 대부분이어서 정형 데이터와 동일한 개념으로 사용하면 오해나 왜곡의 가능성이 크므로 참고 정도로만 활용하는 것이 좋다.
     
-    ![스크린샷 2025-06-02 115805.png](attachment:6f9185ca-be83-4438-9a80-162835de9f74:스크린샷_2025-06-02_115805.png)
+    ![Image](https://github.com/user-attachments/assets/b0ae0a62-86ca-41b1-8913-abfd4a6e0ba2)
     
 
 ## 좋은 데이터 예시 - 정형 데이터
