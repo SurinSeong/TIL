@@ -1,5 +1,7 @@
 # TIL (Today I learned)
 
+## [AI]()
+
 ## Computer Science
 
 1. [Computational Thinking](https://github.com/SurinSeong/TIL/blob/109b835901079a16fceb325e4df8bf03285e8a99/CS/computational_thinking.md)
@@ -29,9 +31,6 @@
 ## Web
 1. []()
 2. []()
-
-
-## Java
 
 
 ## Javascript
