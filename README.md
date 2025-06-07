@@ -1,6 +1,6 @@
 # TIL (Today I learned)
 
-## [AI]()
+## [AI](https://github.com/SurinSeong/TIL/tree/a82cb6574d234a745e29236c498e9d438f829bde/AI)
 
 ## Computer Science
 
