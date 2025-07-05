@@ -23,7 +23,7 @@
 
 ### Evaluation Metric tool : Ragas
 
-- **Ragas**
+- **[Ragas](https://docs.ragas.io/en/stable/)**
     - LLM의 성능 평가를 쉽게 구현해줄 수 있는 오픈소스 라이브러리
     - **Langchain과 굉장히 쉽게 호환**이 되며, 사용성이 편리하여 **평가 지표 구현이 쉬움**.
     - RAG를 평가할 때 쓰이는 지표들뿐만 아니라, AI Agent, Natural Language Compression, SQL 등을 평가하는 지표들도 제공
